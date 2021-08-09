@@ -21,6 +21,50 @@ include('connect.php');
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <!-- <link href="images/webclip.png" rel="apple-touch-icon"> -->
+  <style>
+          .pure-1{
+          font-size: 12px;
+        }
+
+        .p-absolute{
+          position: absolute;
+        }
+
+        .p-relative{
+          position: relative;
+        }
+
+        .img-ball{
+          z-index: 0;
+          top: 200px;
+          left: 20px;
+          max-width: 16%;
+          animation: rollIn 1s alternate;
+        }
+        .img-card{
+          top: 0px;
+          top: -30px;
+          left: 300px;
+          max-width: 26%;
+          z-index: 0;
+          animation: flip .5s  alternate
+        }
+        .img-dice{
+            bottom: 0;
+          top: -30px;
+          left: 300px;
+          z-index: 1;
+          max-width: 26%;
+          animation: jackInTheBox 1s  alternate;	
+        }
+
+        .img-zoom{
+          transition: all .2s;
+        }
+        .img-zoom:hover{
+          transform: scale(1.125);
+        }
+  </style>
 </head>
 <body>
   <div data-include="navbar"></div>
@@ -29,7 +73,7 @@ include('connect.php');
       <div class="container-warp-login inner-wrapper">
       
         <div class="container-logo">
-        <div class="pure-1 p-relative img-zoom">
+        <div class="p-relative">
         <img src="images/logo-ufacasino.png" width="100%" alt="">
        <img src="images/มือถือ2.png" alt="มือถือ2" width="80px" class="p-absolute img-ball logo-brand grow" />
        <img src="images/เงิน.png" alt="เงิน" width="60px" class="p-absolute img-card logo-brand grow" />
@@ -40,7 +84,7 @@ include('connect.php');
           <div class="w-form">
             <form name="formlogin" id="login" method="POST" action="checkuser.php">
               <input type="text" class="field-login w-input" autofocus="true" placeholder="TOKEN" id="token" required="required">
-              <input type="text" class="field-login w-input" name="username" data-name="username" placeholder="USERNAME" id="username" required="required">
+              <input type="text" class="field-login w-input" name="USERNAME" data-name="USERNAME" placeholder="username" id="username" required="required">
               <!-- <input type="submit" value="เข้าสู่ระบบ" data-wait="Please wait..." class="btn-login w-button"> -->
               <button id="btn-login-submit" type="submit" class="btn-login w-button">เข้าสู่ระบบ</button>
               <p class="text-register">ยังไม่มี รหัสใช่ไหม? <a href="register.html" target="_self" class="link"><span class="text-span-7">ติดต่อพนักงาน</span></a></p>
@@ -60,7 +104,7 @@ include('connect.php');
    <footer id="footer" class="footer">
       <div class="w-container">
        <!--  <div class="div-footer"><img src="images/tbank.svg" width="75" alt="" class="logo-bank grow"><img src="images/bbl.svg" width="75" alt="" class="logo-bank grow"><img src="images/kbank.svg" width="75" alt="" class="logo-bank grow"><img src="images/ktb.svg" width="75" alt="" class="logo-bank grow"><img src="images/tmb.svg" width="75" alt="" class="logo-bank grow"><img src="images/scb.svg" width="75" alt="" class="logo-bank grow"><img src="images/bay.svg" width="75" alt="" class="logo-bank grow"></div> -->
-       <div class="text-footer">Copyright 2099 © <strong>UFAPRO888S</strong>.COM All Rights Reserved.<br>Powered by <a href="https://ufax24.com/" target="_blank" class="link-ufax24">UFAX TEAM</a></div>
+        <div class="text-footer">Copyright 2099 © <strong>UFAPRO888S</strong>.COM All Rights Reserved.<br>Powered by <a href="https://ufax24.com/" target="_blank" class="link-ufax24">UFAX TEAM</a></div>
       </div>
     </footer>
   </div>

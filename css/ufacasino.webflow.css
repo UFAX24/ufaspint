@@ -1903,46 +1903,5 @@ caption {
 }
 
 
-.pure-1{
-  font-size: 12px;
-}
 
-.p-absolute{
-	position: absolute;
-}
-
-.p-relative{
-	position: relative;
-}
-
-.img-ball{
-	z-index: 0;
-	top: 200px;
-  left: 20px;
-  max-width: 16%;
-	animation: rollIn 1s alternate;
-}
-.img-card{
-  top: 0px;
-  top: -30px;
-  left: 300px;
-  max-width: 26%;
-	z-index: 0;
-	animation: flip .5s  alternate
-}
-.img-dice{
-    bottom: 0;
-  top: -30px;
-  left: 300px;
-	z-index: 1;
-  max-width: 26%;
-	animation: jackInTheBox 1s  alternate;	
-}
-
-.img-zoom{
-	transition: all .2s;
-}
-.img-zoom:hover{
-	transform: scale(1.125);
-}
 /*infinite*/

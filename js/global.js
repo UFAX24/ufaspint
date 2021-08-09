@@ -125,14 +125,13 @@ async function saGame() {
 
 }
 
-
-async function ag() {
+async function ufax() {
 
     let chkstatus = await  checkLogin()
 
     if (chkstatus == true) {
        
-        let uri = endpointcasino + '/agg/login?gameId=1&prefix=AMBBET&website=https://viewbet.com&client=';
+        let uri = endpointcasino + 'https://ufax24.com&client=';
 
         if (isMobile()) {
             uri = uri + 'MB'
@@ -149,7 +148,7 @@ async function ag() {
                 if (resp.data.code == 1005) {
                 alert(resp.data.message)
                 sessionStorage.clear();
-                location.href = 'login.html'
+                location.href = 'https://ufax24.com'
             } else {
                 alert(resp.data.message)
                 // gameWindow.close();
@@ -167,7 +166,58 @@ async function ag() {
                 if (resp.data.code == 1005) {
                 alert(resp.data.message)
                 sessionStorage.clear();
-                location.href = 'login.html'
+                location.href = 'https://ufax24.com'
+            } else {
+                alert(resp.data.message)
+                gameWindow.close();
+                }
+            }
+        } 
+    }
+}
+
+async function ag() {
+
+    let chkstatus = await  checkLogin()
+
+    if (chkstatus == true) {
+       
+        let uri = endpointcasino + 'https://ufax24.com&client=';
+
+        if (isMobile()) {
+            uri = uri + 'MB'
+        } else {
+            uri = uri + 'PC'
+        }
+    
+        if (isLine()) {
+            let resp = await axios.get(uri)
+
+             if (resp.data.code == 0) {
+                location.href = resp.data.url
+            } else {
+                if (resp.data.code == 1005) {
+                alert(resp.data.message)
+                sessionStorage.clear();
+                location.href = 'login.php'
+            } else {
+                alert(resp.data.message)
+                // gameWindow.close();
+                }
+            }
+        }else{
+
+            checkWindow();
+
+            let resp = await axios.get(uri)
+
+             if (resp.data.code == 0) {
+                gameWindow.location.href = resp.data.url
+            } else {
+                if (resp.data.code == 1005) {
+                alert(resp.data.message)
+                sessionStorage.clear();
+                location.href = 'login.php'
             } else {
                 alert(resp.data.message)
                 gameWindow.close();
