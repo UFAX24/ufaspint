@@ -1,0 +1,94 @@
+<!-- Integrating the LIFF SDK -->
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+<!-- Start Script For Get Form Values and Calculation -->
+<script>
+  // Initialize LIFF
+  liff
+    .init({ liffId: "1655655902-RM1oV1m1" })
+    .then(() => {
+      runApp();
+    })
+    .catch((err) => {
+      console.error(err.code, error.message);
+    });
+
+  function runApp() {
+    // Function form submit
+    function submitForm(e) {
+      ....
+      
+      ....
+      // Sends messages on behalf of the user to the chat screen where the LIFF app is opened.
+      if (
+        liff.getContext().type !== "none" &&
+        liff.getContext().type !== "external"
+      ) {
+        // Create flex message
+        let message = createFlexMessage(
+          carYear,
+          carPrice,
+          downPayment,
+          loan,
+          resultCalculate
+        );
+
+        // Send messages
+        liff
+          .sendMessages(message)
+          .then(() => {
+            liff.closeWindow();
+          })
+          .catch((err) => {
+            console.error(err.code, error.message);
+          });
+      } else {
+        // Result table
+        createResultTable(
+          carYear,
+          carPrice,
+          downPayment,
+          loan,
+          resultCalculate
+        );
+      }
+    }
+  }
+
+  // Function to get get form values
+  function getInputValue(id)
+
+  // Function payment calculation
+  function paymentCalculate(carYear, loan)
+
+  // Function interest calculation
+  function interestCalculation(loan, interestRate)
+  
+  // Function convert a number into a locale-specific numeric representation of the number
+  function numberToString(number)
+
+  // Create result table
+  function createResultTable(carYear, carPrice, downPayment, loan, resultCalculate)
+  
+  // Creat flex message
+  function createFlexMessage(carYear, carPrice, downPayment, loan, resultCalculate) {
+    let carYearTxt = new Date().getFullYear() - carYear;
+    let carPriceTxt = numberToString(carPrice);
+    let downPaymentTxt = numberToString(downPayment);
+    let loanTxt = numberToString(loan);
+
+    let interestRate36 = resultCalculate[36].interestRate;
+    let installment36 = resultCalculate[36].installment;
+    let interestRate48 = resultCalculate[48].interestRate;
+    let installment48 = resultCalculate[48].installment;
+    let interestRate60 = resultCalculate[60].interestRate;
+    let installment60 = resultCalculate[60].installment;
+    let interestRate72 = resultCalculate[72].interestRate;
+    let installment72 = resultCalculate[72].installment;
+
+    // Using flex message simulator for json
+    let flexJson = {};
+
+    return [{ type: "flex", altText: "คำนวณค่างวดรถ", contents: flexJson }];
+  }
+</script>
