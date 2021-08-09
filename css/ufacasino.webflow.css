@@ -1,5 +1,5 @@
 @import './animate.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 .main_content {
   position: relative;
   display: block;
@@ -23,7 +23,7 @@
   -ms-flex-align: start;
   align-items: flex-start;
   
-  background-image: url('../images/BG-Gold4.png');
+  background-image: url('../images/BG-Gold4.jpg');
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -69,7 +69,7 @@
 
 .text-header {
   position: relative;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #f8f6f6;
   font-size: 21px;
   font-style: italic;
@@ -117,7 +117,7 @@
   transition: -webkit-transform 200ms ease;
   transition: transform 200ms ease;
   transition: transform 200ms ease, -webkit-transform 200ms ease;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #fff;
   font-size: 20px;
   text-align: center;
@@ -169,7 +169,7 @@
 .text-gray-light {
   width: 100%;
   margin-top: 10px;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #fff;
   font-size: 133%;
   font-weight: 400;
@@ -182,7 +182,7 @@
   margin-right: auto;
   margin-left: auto;
   padding-top: 0px;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #fff;
   font-size: 16px;
   line-height: 23px;
@@ -190,7 +190,7 @@
 
 .subtitle-tab-menu {
   padding-top: 5px;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #fff;
 }
 
@@ -257,7 +257,7 @@
 
 .text-footer {
   margin-top: 20px;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #fff;
   line-height: 30px;
 }
@@ -390,7 +390,7 @@
 }
 
 .heading-2 {
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #d4d4d4;
   font-size: 230%;
   font-weight: 400;
@@ -402,7 +402,7 @@
 }
 
 .detail-about {
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #ebe5e5;
   font-size: 16px;
   text-align: left;
@@ -416,7 +416,7 @@
 
 .subtitle-casino {
   margin-top: 25px;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #f4f4f4;
   /* font-style: italic; */
   font-weight: 400;
@@ -439,7 +439,7 @@
 
 .list-item {
   margin-top: 10px;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #ebe5e5;
   font-size: 16px;
   text-align: left;
@@ -512,7 +512,7 @@
   transition: -webkit-transform 300ms ease;
   transition: transform 300ms ease;
   transition: transform 300ms ease, -webkit-transform 300ms ease;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -561,7 +561,7 @@
   padding-right: 0px;
   padding-left: 0px;
   background-color: transparent;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   text-align: center;
   font-size: 18px;
 }
@@ -571,7 +571,7 @@
 }
 
 .nav-btn-drop {
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #fcfcfc;
   font-weight: 400;
 }
@@ -690,7 +690,7 @@
 
 .detail-promotion {
   margin-bottom: 60px;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #f4f5f5;
   font-weight: 400;
   text-align: center;
@@ -772,7 +772,7 @@
 }
 
 .dropdown-link {
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #eaeaea;
 }
 
@@ -826,7 +826,7 @@
 }
 
 .text-block {
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #000;
   font-size: 12px;
   text-align: center;
@@ -874,13 +874,14 @@
   border-color: rgba(223, 217, 191, 0.97);
   border-radius: 9px;
   background-color: transparent;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #fff;
+  
 }
 
 .container-logo {
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .btn-login {
@@ -897,7 +898,7 @@
   transition: -webkit-transform 200ms ease;
   transition: transform 200ms ease;
   transition: transform 200ms ease, -webkit-transform 200ms ease;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   font-size: 18px;
 }
 
@@ -923,9 +924,9 @@
   position: relative;
   left: auto;
   right: auto;
-  margin-top: 40px;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-top: 0px;
+  margin-right: 15%;
+  margin-left: 15%;
   text-align: center;
 }
 
@@ -1093,7 +1094,7 @@ caption {
 }
 
 /* .text-game-color{
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #000;
   transition: ease-in-out 100ms;
 } */
@@ -1111,7 +1112,7 @@ caption {
 .dropdown {
   position: relative;
   display: inline-block;
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: #fcfcfc;
   font-weight: 400;
 }
@@ -1222,7 +1223,7 @@ caption {
 }
 
 .text-game-logo {
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   background-color: rgb(53, 57, 53);
   font-size: 20px;
   border-radius: 17px;
@@ -1236,7 +1237,7 @@ caption {
 
 
 .text-game-logo.slot {
-  font-family: Prompt, sans-serif;
+  font-family: Kanit, sans-serif;
   color: white;
 }
 
@@ -1646,7 +1647,7 @@ caption {
     margin-left: 0px;
   }
   .heading {
-    font-family: Prompt, sans-serif;
+    font-family: Kanit, sans-serif;
     color: #fff5f5;
     font-size: 231%;
     font-style: italic;
@@ -1870,9 +1871,8 @@ caption {
 }
 
 .img-logo-casino{
-  width: 97%;
+  width: 90%;
 }
-
 
 .item-nav {
   margin: 10px 7px;
@@ -1901,3 +1901,48 @@ caption {
     max-width: 16.66667%
   }
 }
+
+
+.pure-1{
+  font-size: 12px;
+}
+
+.p-absolute{
+	position: absolute;
+}
+
+.p-relative{
+	position: relative;
+}
+
+.img-ball{
+	z-index: 0;
+	top: 200px;
+  left: 20px;
+  max-width: 16%;
+	animation: rollIn 1s alternate;
+}
+.img-card{
+  top: 0px;
+  top: -30px;
+  left: 300px;
+  max-width: 26%;
+	z-index: 0;
+	animation: flip .5s  alternate
+}
+.img-dice{
+    bottom: 0;
+  top: -30px;
+  left: 300px;
+	z-index: 1;
+  max-width: 26%;
+	animation: jackInTheBox 1s  alternate;	
+}
+
+.img-zoom{
+	transition: all .2s;
+}
+.img-zoom:hover{
+	transform: scale(1.125);
+}
+/*infinite*/
