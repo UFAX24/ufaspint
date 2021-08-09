@@ -81,217 +81,202 @@ Time) -->
             }
         </style>
 
-    
     </head>
     <body>
         <div data-include="navbar"></div>
         <div class="main_content">
             <div class="section-header">
                 <div class="container inner-wrapper">
-                   
-                  
-                        <div class="container-logo">
-                            <div class="p-relative">
- <img src="images/logo-ufacasino.png" width="90%" alt="" class="grow">
-                                <img
-                                    src="images/มือถือ2.png"
-                                    alt="มือถือ2"
-                                    width="80px"
-                                    class="p-absolute img-ball img-zoom grow"/>
-                                <img
-                                    src="images/เงิน.png"
-                                    alt="เงิน"
-                                    width="60px"
-                                    class="p-absolute img-card img-zoom grow"/>
-                                <img
-                                    src="images/มือถือ1.png"
-                                    alt="มือถือ1"
-                                    width="50px"
-                                    class="p-absolute img-dice img-zoom grow"/>
-                               
+
+                    <div class="container-logo">
+                        <div class="p-relative">
+                            <img src="images/logo-ufacasino.png" width="90%" alt="" class="grow">
+                            <img
+                                src="images/มือถือ2.png"
+                                alt="มือถือ2"
+                                width="80px"
+                                class="p-absolute img-ball img-zoom grow"/>
+                            <img
+                                src="images/เงิน.png"
+                                alt="เงิน"
+                                width="60px"
+                                class="p-absolute img-card img-zoom grow"/>
+                            <img
+                                src="images/มือถือ1.png"
+                                alt="มือถือ1"
+                                width="50px"
+                                class="p-absolute img-dice img-zoom grow"/>
+
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="num" value="0">
+                    <input type="hidden" id="idTest" value="<?php echo  $_SESSION["id"];?>">
+                    <!-- <button onclick="btn()">Probability statistics</button> <button
+                    onclick="test()">test100Draws</button> -->
+                    <!-- Here is the js part -->
+                    <style type="text/css">
+                        text {
+                            font-family: Helvetica, Arial, sans-serif;
+                            font-size: 11px;
+                            pointer-events: none;
+                        }
+                        #chart {
+                            position: absolute;
+                            width: 500px;
+                            height: 500px;
+                            top: 0;
+                            left: 0;
+                        }
+                        #question {
+                            position: absolute;
+                            width: 400px;
+                            height: 500px;
+                            top: 0;
+                            left: 520px;
+                        }
+                        #question h1 {
+                            font-size: 50px;
+                            font-weight: bold;
+                            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                            position: absolute;
+                            padding: 0;
+                            margin: 0;
+                            top: 50%;
+                            -webkit-transform: translate(0,-50%);
+                            transform: translate(0,-50%);
+                        }
+                    </style>
+
+                    <script src="https://code.iconify.design/1/1.0.0-rc7/iconify.min.js"></script>
+                    <script src="https://unpkg.com/d3@5.7.0/dist/d3.min.js"></script>
+                    <div class="container">
+                        <div class="buttons">
+                            <div class="difficulty">
+                                <div class="difficulty_text">
+                                    <p>Difficulty</p>
+                                </div>
+                                <div class="difficulty__buttons">
+                                    <button class="difficulty__button" value="10">
+                                        <div class="button__front">
+                                            <span
+                                                class="iconify"
+                                                data-icon="emojione:beaming-face-with-smiling-eyes"
+                                                data-inline="false"></span>
+                                        </div>
+                                        <div class="button__back">
+                                            <span
+                                                class="iconify"
+                                                data-icon="emojione-monotone:beaming-face-with-smiling-eyes"
+                                                data-inline="false"></span>
+                                        </div>
+                                    </button>
+                                    <button class="difficulty__button current" value="50">
+                                        <div class="button__front">
+                                            <span class="iconify" data-icon="emojione:anguished-face" data-inline="false"></span>
+                                        </div>
+                                        <div class="button__back">
+                                            <span
+                                                class="iconify"
+                                                data-icon="emojione-monotone:anguished-face"
+                                                data-inline="false"></span>
+                                        </div>
+                                    </button>
+                                    <button class="difficulty__button" value="100">
+                                        <div class="button__front">
+                                            <span class="iconify" data-icon="emojione:astonished-face" data-inline="false"></span>
+                                        </div>
+                                        <div class="button__back">
+                                            <span
+                                                class="iconify"
+                                                data-icon="emojione-monotone:astonished-face"
+                                                data-inline="false"></span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bottom_buttons">
+                                <div class="bottom_button push">
+                                    <div class="push__text">
+                                        <p>Spin</p>
+                                    </div>
+                                    <button id="push" class="push__button">
+                                        <div class="button__front">
+                                            <!-- <span class="iconify" data-icon="emojione:money-with-wings"
+                                            data-inline="false"></span> -->
+                                            <span class="iconify" data-icon="uil:spin" data-inline="false"></span>
+                                        </div>
+                                        <div class="button__back">
+                                            <span
+                                                class="iconify"
+                                                data-icon="emojione-monotone:money-with-wings"
+                                                data-inline="false"></span>
+                                        </div>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        
-                    
-               
-
-                        <input type="hidden" id="num" value="0">
-                        <input type="hidden" id="idTest" value="<?php echo  $_SESSION["id"];?>">
-                        <!-- <button onclick="btn()">Probability statistics</button> <button
-                        onclick="test()">test100Draws</button> -->
-                        <!-- Here is the js part -->
-                        <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
-
-                        <script>
-                            var oPointer = document.getElementsByTagName("img")[0];
-                            var oTurntable = document.getElementsByTagName("img")[1];
-                            var oPointer1 = document.getElementsByTagName("img")[2];
-
-                            var cat = 36; //A total of 7 fan-shaped areas, each area is about 51.4 degrees
-                            var offOn = true; //Whether it is drawing
-                            var transformRotate = 0 //Number of turns
-                            var randmArr = [
-                                0,
-                                0.1,
-                                0.15,
-                                0.5,
-                                0.8,
-                                10,
-                                15,
-                                25,
-                                30,
-                                100
-                            ] //The probability is calculated as between randmArr[i-1] and randmArr[i]
-                            // print probability
-
-                            function btn() {
-                                // console.log(form); console.log(obj);
-                                let num = 0
-                                Object
-                                    .keys(obj)
-                                    .map(item => {
-                                        num += obj[item]
-                                    })
-                                // console.log(num);
-
-                            }
-
-                            oPointer1.onclick = function () {
-                                if (offOn == true) {
-                                    offOn = !offOn;
-                                    if ($('#num').val() == 0) {
-                                        ratating();
-                                    } else if ($('#num').val() >= 1) {
-                                        alert('หมุนได้ครั้งเดียว " นะจ๊ะ " ')
-                                    }
-                                }
-                            }
-                            let n = 0
-                            var testTime = null
-                            function test() {
-                                testTime = setInterval(() => {
-                                    n++
-                                    if (n > 99) {
-                                        clearInterval(testTime)
-                                    }
-                                    ratating();
-
-                                }, 300);
-                            }
-                            //Rotate
-                            //TODO: Specify the winning interval and pass the interval judgment value
-                            var prevrdm = 0; //Cache the last rotation
-                            var obj = {} //Number of random numbers generated
-                            var form = {} //Statistics on the probability of winning
-                            var timer = null
-                            function ratating() {
-                                var timer = null;
-                                const rdm = parseInt(Math.random() * (100 - 1) + 1); //Random number
-                                var num = 10
-                                var nextrdm = 0; //This rotation
-                                // console.log('rdm='+rdm); Count the number of random numbers
-                                if (!obj[rdm]) {
-                                    obj[rdm] = 1;
-                                } else {
-                                    obj[rdm]++;
-                                }
-                                for (var i = 0; i < randmArr.length; i++) {
-                                    if (i === 0) {
-                                        if (rdm >= 0 && rdm <= randmArr[0]) {
-                                            num = i + 1
-                                            break
-                                        }
-                                    } else {
-                                        if (rdm > randmArr[i - 1] && rdm <= randmArr[i]) {
-                                            num = i + 1
-                                            break
-                                        }
-                                    }
-
-                                }
-                                // console.log('num='+num);
-                                clearTimeout(timer);
-                                timer = null
-                                timer = setTimeout(function () {
-                                    nextrdm = Math.floor((num * cat) - 24); //Define the result of this draw
-                                    var biginRotate = 2 * 360 + (347 - prevrdm) //Define the default number of rotations, and at the same time complete the wheel to zero,
-                                    prevrdm = nextrdm
-
-                                    transformRotate = nextrdm + biginRotate + transformRotate //The degree of this rotation
-                                    // When testing the probability of winning, comment out the following and set the timeout time to 0
-                                    oTurntable.style.transform = "rotate(" + transformRotate + "deg)";
-                                    setTimeout(function () {
-                                        offOn = !offOn;
-                                        // Count the probability of winning
-                                        if (!form['a' + num]) {
-                                            form['a' + num] = 1;
-                                        } else {
-                                            form['a' + num]++
-                                        }
-                                        let price = 0
-                                        var type = 3
-                                        var id = $('#idTest').val()
-                                        console.log("id", id)
-                                        if (nextrdm <= cat * 1) {} else if (nextrdm <= cat * 2) {
-                                            price = 10000
-                                        } else if (nextrdm <= cat * 3) {
-                                            price = 8000
-                                        } else if (nextrdm <= cat * 4) {
-                                            price = 5000
-                                        } else if (nextrdm <= cat * 5) {
-                                            price = 3000
-                                        } else if (nextrdm <= cat * 6) {
-                                            price = 1000
-                                        } else if (nextrdm <= cat * 7) {
-                                            price = 500
-                                        } else if (nextrdm <= cat * 8) {
-                                            price = 300
-                                        } else if (nextrdm <= cat * 9) {
-                                            price = 100
-                                        } else if (nextrdm <= cat * 10) {
-                                            price = 50
-                                        }
-                                        $.ajax({
-                                            type: 'POST',
-                                            data: {
-                                                id: id,
-                                                price: price,
-                                                type: type
-                                            },
-                                            url: 'updatetoken.php',
-                                            success: function (data) {
-                                                // window.location.assign('index.php')
-                                            }
-                                        });
-                                        $('#num').val(1)
-                                    }, 0);
-                                }, 30);
-                            }
-                        </script>
-                    </div>
-                </div>
-                <footer id="footer" class="footer">
-                    <div class="w-container">
-                        <div class="text-footer">Copyright 2099 ©
-                            <strong>UFAPRO888S</strong>.COM All Rights Reserved.<br>Powered by
-                            <a href="https://ufax24.com/" target="_blank" class="link-ufax24">UFAX TEAM</a>
+                        <div id="chart">
+                            <div class="chart__front"></div>
+                            <div class="chart__back"></div>
+                            <div id="result"></div>
                         </div>
                     </div>
-                </footer>
-            </div>
-            <!-- <div data-include="mobile"></div>-->
+                    <div id="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Result:</h2>
+                                <span class="closeBtn">&times;</span>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-body-name modal-body-container">
+                                    <div class="modal-body-title">Name:</div>
+                                    <div class="spin-result spin-result-name"></div>
+                                </div>
+                                <div class="modal-body-rank modal-body-container">
+                                    <div class="modal-body-title">Rank:</div>
+                                    <div class="spin-result spin-result-rank"></div>
+                                </div>
+                                <div class="modal-body-price modal-body-container">
+                                    <div class="modal-body-title">Price:</div>
+                                    <div class="spin-result spin-result-price"></div>
+                                </div>
+                                <div class="modal-body-vladimir modal-body-container">
+                                    <div class="modal-body-title">Vladimir's Club:</div>
+                                    <div class="spin-result spin-result-vladimir"></div>
+                                </div>
+                                <div class="modal-body-coins modal-body-container">
+                                    <div class="modal-body-title">Coins per person:</div>
+                                    <div class="spin-result spin-result-coins"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-            <script
-                src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5e96e9f031cf495f5f232afb"
-                type="text/javascript"
-                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-                crossorigin="anonymous"></script>
-            <script src="js/webflow.js" type="text/javascript"></script>
-            <script src="js/global.js"></script>
-            <script src="js/xo.js"></script>
-            <!-- [if lte IE 9]> <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-        </body>
-    </html>
+                </div>
+            </div>
+            <footer id="footer" class="footer">
+                <div class="w-container">
+                    <div class="text-footer">Copyright 2099 ©
+                        <strong>UFAPRO888S</strong>.COM All Rights Reserved.<br>Powered by
+                        <a href="https://ufax24.com/" target="_blank" class="link-ufax24">UFAX TEAM</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- <div data-include="mobile"></div>-->
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script
+            src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5e96e9f031cf495f5f232afb"
+            type="text/javascript"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="js/webflow.js" type="text/javascript"></script>
+        <script src="js/global.js"></script>
+        <!--<script src="js/xo.js"></script>-->
+        <!-- [if lte IE 9]> <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+    </body>
+</html>
