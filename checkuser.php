@@ -1,12 +1,12 @@
 <?php 
 session_start();
-        if(isset($_POST['username'])){
+        if(isset($_POST['token'])){
                   include("connect.php");
-                  $username = $_POST['username'];
-                  $ufa_id = $_POST['password'];
+                  $token = $_POST['token'];
+                  $ufa_id = $_POST['username'];
                  
                  $sql="SELECT * FROM users 
-                  WHERE  token ='$username' " ;               
+                  WHERE  token ='$token' " ;               
                   $result = mysqli_query($con,$sql) or die("Error") ;
                   $row = mysqli_num_rows($result);     
 
@@ -14,7 +14,7 @@ session_start();
                     
                       $row = mysqli_fetch_array($result);
 
-                      $_SESSION["username"] = $row["username"];
+                      $_SESSION["token"] = $row["token"];
                       $_SESSION["id"] = $row["id"];
                       $ufa_idx = $row["ufa_id"];
                       if(empty( $ufa_idx)){
@@ -24,7 +24,7 @@ session_start();
                        $ch =  mysqli_query($con,$sql4) or die(mysqli_error($con));
 
                        if($ch){
-                        echo "<script> window.location.assign('spin.php');</script>";              
+                        echo "<script> window.location.assign('/spinner/index.html');</script>";              
                        }else{
                         echo "ไม่สามารเข้าได้";
                        }
