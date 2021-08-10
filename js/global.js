@@ -64,19 +64,11 @@ function checkWindow() {
     return;
 }
 
-async function saGame() {
-
-    
+async function ufax24() {  
     let chkstatus = await checkLogin()
     
      if (chkstatus == true) {
         let uri = endpointcasino + '/sagame/login?gameId=601&client=';
-    
-        if (isMobile()) {
-            uri = uri + 'MB'
-        } else {
-            uri = uri + 'PC'
-        }
 
             if (isLine()){
                 let resp = await axios.get(uri)
@@ -131,7 +123,7 @@ async function ufax() {
 
     if (chkstatus == true) {
        
-        let uri = endpointcasino + 'https://ufax24.com&client=';
+        let uri = 'https://ufax24.com&client=';
 
         if (isMobile()) {
             uri = uri + 'MB'
@@ -182,7 +174,7 @@ async function ag() {
 
     if (chkstatus == true) {
        
-        let uri = endpointcasino + 'https://ufax24.com&client=';
+        let uri = 'https://ufax24.com&client=';
 
         if (isMobile()) {
             uri = uri + 'MB'
