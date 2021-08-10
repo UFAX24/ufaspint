@@ -23,7 +23,7 @@
   -ms-flex-align: start;
   align-items: flex-start;
   
-  background-image: url('../images/BG-Gold4.jpg');
+  /*background-image: url('../images/BG-Gold4.jpg');*/
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -876,12 +876,6 @@
   background-color: transparent;
   font-family: Kanit, sans-serif;
   color: #fff;
-  
-}
-
-.container-logo {
-  margin-top: 10px;
-  margin-bottom: 0px;
 }
 
 .btn-login {
@@ -928,6 +922,7 @@
   margin-right: 15%;
   margin-left: 15%;
   text-align: center;
+  
 }
 
 .container-warp-login.inner-wrapper {
@@ -1263,9 +1258,10 @@ caption {
 
 
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1991px) {
   .main_content {
     padding-top: 100px;
+    background-image: url('../images/pc_login/BG_login.jpg');
   }
   .container {
     display: inline-block;
@@ -1293,8 +1289,6 @@ caption {
   width: auto;
   }
 
-  
-     
   .container.service-inner-wrapper {
     width: 74%;
     max-width: 100%;
@@ -1443,6 +1437,8 @@ caption {
     width: 92%;
   }
 
+
+
   .container-nav {
     display: inline-flex;
   }
@@ -1456,11 +1452,50 @@ caption {
   .nav-menu{
     display: none;
   }
+  .p-absolute{
+    position: absolute;
+  }
+  
+  .p-relative{
+    position: relative;
+  }
+  
+  .img-ball{
+    z-index: 0;
+    top: 200px;
+    left: 20px;
+    max-width: 16%;
+    animation: rollIn 1s alternate;
+  }
+  .img-card{
+    top: 0px;
+    top: -30px;
+    left: 300px;
+    max-width: 26%;
+    z-index: 0;
+    animation: flip .5s  alternate
+  }
+  .img-dice{
+      bottom: 0;
+    top: -30px;
+    left: 300px;
+    z-index: 1;
+    max-width: 26%;
+    animation: jackInTheBox 1s  alternate;	
+  }
+  
+  .img-zoom{
+    transition: all .2s;
+  }
+  .img-zoom:hover{
+    transform: scale(1.125);
+  }
 
 }
 
 @media screen and (max-width: 767px) {
   .main_content {
+    background-image: url('../images/mb_login/bgmb.jpg');
     padding-top: 90px;
   }
   .container.service-inner-wrapper {
@@ -1524,6 +1559,44 @@ caption {
     display: inline-block;
     max-width: 100.0048911734803%;
   }
+  .p-absolute{
+    position: absolute;
+  }
+  
+  .p-relative{
+    position: relative;
+  }
+  
+  .img-ball{
+    z-index: 0;
+    top: 200px;
+    left: 20px;
+    max-width: 16%;
+    animation: rollIn 1s alternate;
+  }
+  .img-card{
+    top: 0px;
+    top: -30px;
+    left: 300px;
+    max-width: 26%;
+    z-index: 0;
+    animation: flip .5s  alternate
+  }
+  .img-dice{
+      bottom: 0;
+    top: -30px;
+    left: 300px;
+    z-index: 1;
+    max-width: 26%;
+    animation: jackInTheBox 1s  alternate;	
+  }
+  
+  .img-zoom{
+    transition: all .2s;
+  }
+  .img-zoom:hover{
+    transform: scale(1.125);
+  }
 }
 
 
@@ -1533,6 +1606,7 @@ caption {
     width: 100%;
     height: 100%;
     background-position: 50% 50%;
+    background-image: image-set("images/mb_login/bgmb.jpg");
   }
   .container.inner-wrapper {
     width: auto;
@@ -1891,16 +1965,54 @@ caption {
     top: -6%;
     z-index: 1;
 }
+.p-absolute{
+  position: absolute;
 }
 
-@media (min-width: 768px){
+.p-relative{
+  position: relative;
+}
+
+.img-ball{
+  z-index: 0;
+  top: 200px;
+  left: 20px;
+  max-width: 16%;
+  animation: rollIn 1s alternate;
+}
+.img-card{
+  top: 0px;
+  top: -30px;
+  left: 300px;
+  max-width: 26%;
+  z-index: 0;
+  animation: flip .5s  alternate
+}
+.img-dice{
+    bottom: 0;
+  top: -30px;
+  left: 300px;
+  z-index: 1;
+  max-width: 26%;
+  animation: jackInTheBox 1s  alternate;	
+}
+
+.img-zoom{
+  transition: all .2s;
+}
+.img-zoom:hover{
+  transform: scale(1.125);
+}
+}
+
+/* @media (min-width: 768px){
   .col-md-2 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 16.66667%;
     flex: 0 0 16.66667%;
     max-width: 16.66667%
   }
-}
+} */
 
 
 
