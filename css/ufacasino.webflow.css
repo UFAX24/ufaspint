@@ -1490,48 +1490,73 @@ caption {
   .img-zoom:hover{
     transform: scale(1.125);
   }
-
-  .wheelsp {
-    margin-top: 0px;
-    margin-left: 0px;
-    background-position: center;
-    background-image: url('../images/spin/wheelout.png');
-  }
-
-  text {
-    font-family: Katin, sans-serif;
-    font-size: 11px;
-    pointer-events: auto;
-  }
-
-  #chart {
+  .wheelgame-bg{
     position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 0;
-    left: 0;
+    background-image: url('../images/spin/Spin-UFAPRO888S.jpg');
+    width: 100%;
+    height: auto;
   }
 
-  #question {
+  #app {
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
     position: absolute;
-    width: 400px;
-    height: 500px;
-    top: 0;
-    left: 520px;
+    left: 140px;
+    top: 55px;
+  }
+  
+  .marker {
+    position: relative;
+    width: 100px;
+    left: 300px;
+    top: 40px;
+    z-index: 2;
   }
 
-  #question h1 {
-    font-size: 50px;
-    font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+  
+  .wheel {
+    width: 100%;
+    height: 100%;
   }
 
+  .button {
+    position: relative;
+    display: block;
+    width: 250px;
+    cursor: pointer;
+    left: 229px;
+    top: -450px;
+    animation: flip .5s  alternate
+  }
+ 
+  .button:hover {
+    opacity: 0.8;
+  }
+  
+  .blur {
+    animation: blur 10s;
+  }
+  
+  @keyframes blur {
+    0% {
+      filter: blur(1.5px);
+    }
+    80% {
+      filter: blur(1.5px);
+    }
+    100% {
+      filter: blur(0px);
+    }
+  }
+
+  .arro {
+    position: relative;
+    left: 129px;
+    top: -1300px;
+    width: 300px;
+    animation: jackInTheBox 1s  alternate infinite;	
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1638,6 +1663,84 @@ caption {
   .img-zoom:hover{
     transform: scale(1.125);
   }
+
+
+
+  #app {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    margin-left: 10%;
+    left: 10px;
+    top: 55px;
+  }
+  
+  .marker {
+    position: relative;
+    width: 60px;
+    left: 170px;
+    top: 40px;
+    z-index: 2;
+  }
+  
+  .wheel {
+    width: 100%;
+    height: 100%;
+  }
+
+  .button {
+    position: relative;
+    display: block;
+    width: 150px;
+    cursor: pointer;
+    left: 130px;
+    top: -260px;
+  }
+
+  .arro {
+    position: relative;
+    display: block;
+    width: 150px;
+  }
+
+  .button:hover {
+    opacity: 0.8;
+  }
+  
+  .blur {
+    animation: blur 10s;
+  }
+
+
+  
+  @keyframes blur {
+    0% {
+      filter: blur(1.5px);
+    }
+    80% {
+      filter: blur(1.5px);
+    }
+    100% {
+      filter: blur(0px);
+    }
+  }
+  .arro {
+    position: absolute;
+    left: 329px;
+    top: 50px;
+    width: 100px;
+    animation: jackInTheBox 1s  alternate infinite;	
+  }
+  .wheelgameMBB{
+    top: -350px;
+    position: sticky;
+    width: 100%;
+    height: auto;
+    background-size: auto;
+  }
+
+
 }
 
 
