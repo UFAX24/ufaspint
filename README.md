@@ -1,2 +1,0 @@
-# ufacasino
-SKT PNCK
