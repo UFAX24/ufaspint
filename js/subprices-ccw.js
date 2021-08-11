@@ -27,7 +27,8 @@ var options = {
       name: '5000'
     },
     {
-      name: '50'
+      name: '50บาท',
+      pic: '50b'
     }
 
   ],
@@ -42,7 +43,7 @@ var clickHandler = function () {
   $('.spinner span').hide();
   //var price = Math.floor((Math.random() * 8));
   $r.spin(9).done(function (price) {
-    $('.price').text('You have: ' + price.name);
+    $('.price').text(price.name);
     $('.spinner').on('click', clickHandler);
     $('.spinner span').show();
   });
