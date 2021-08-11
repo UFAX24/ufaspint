@@ -865,6 +865,9 @@
 }
 
 .field-login {
+  
+
+
   height: 47px;
   max-height: 20%;
   padding-top: 10px;
@@ -879,8 +882,8 @@
 }
 
 .btn-login {
-  width: 520px;
-  max-width: 100%;
+ width: 100%;
+  
   padding-top: 15px;
   padding-bottom: 15px;
   border-style: solid;
