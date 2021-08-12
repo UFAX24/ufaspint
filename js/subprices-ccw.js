@@ -36,7 +36,7 @@ var options = {
   clockWise: false
 };
 
-var $r = $('.roulette').fortune(options);
+var $r = $('.roulette').fortune(9);
 
 var clickHandler = function () {
   $('.spinner').off('click');
